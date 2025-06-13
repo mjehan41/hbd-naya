@@ -10,13 +10,15 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 </head>
-<body style="background-image: url(https://images.unsplash.com/photo-1618397746666-63405ce5d015?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);" class="flex justify-center h-screen items-center">
+<body style="background-image: url(https://images.unsplash.com/photo-1618397746666-63405ce5d015?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);" class="flex flex-col justify-start h-screen items-center">
 
     <div class="bg-white border px-10 py-8 border-4 border-gray-300 shadow-lg shadow-blue-300 rounded-xl text-center animate__animated animate__backInDown m-8 w-80" id="kartu">
         <h1 class="text-2xl font-bold">Happy Birthday</h1>
         <h1 class="text-xl text-blue-300 font-bold mt-2 animate__animated animate__pulse animate__infinite"> Siti Nadia Nariandita</h1>
         <h1>❤️</h1>
         <button class="p-2 bg-blue-500 text-white rounded mt-3 hover:bg-blue-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada" onclick="ubahKartu()">Klik Disini Yaa!</button>
+    </div>
+    <div id="foto" class="mt-4">
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
@@ -27,6 +29,7 @@
   origin: { y: 0.6 },
 });  
 let kartu = document.getElementById("kartu");
+const foto = document.getElementById("foto");
 function ubahKartu() {
     kartu.innerHTML = `<h1 class="font-semibold text-wrap animate__animated animate__zoomIn">🎉 Selamat Ulang Tahun, Sayang! 🎂💖
 
@@ -36,7 +39,10 @@ function ubahKartu() {
         <h2 class="mt-3 animate__animated animate__fadeIn">- Dari : Muhammad Jehan -</h2>
     <button class="p-2 bg-slate-500 text-white rounded mt-3 hover:bg-slate-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada" onclick="refresh()">Tutup</button>
         
+        
         `;
+
+    foto.innerHTML = `<img src="emya.jpg" alt="foto ucapan" class="mx-auto mt-4 rounded shadow-lg w-1/2">`;
 
 }
 function refresh() {
